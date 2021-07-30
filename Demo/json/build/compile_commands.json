@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/mnt/e/File_Documents/vsCode/json/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/e/File_Documents/vsCode/json/include -I/mnt/e/File_Documents/vsCode/json/.  -g   -o CMakeFiles/JSONDEMO.dir/main.cpp.o -c /mnt/e/File_Documents/vsCode/json/main.cpp",
+  "file": "/mnt/e/File_Documents/vsCode/json/main.cpp"
+}
+]
