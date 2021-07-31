@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/e/File_Documents/vsCode/json/include -I/mnt/e/File_Documents/vsCode/json/. 
+CXX_INCLUDES = -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/include -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/. 
 

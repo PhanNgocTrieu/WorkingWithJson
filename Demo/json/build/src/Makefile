@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/e/File_Documents/vsCode/json
+CMAKE_SOURCE_DIR = /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/e/File_Documents/vsCode/json/build
+CMAKE_BINARY_DIR = /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,7 +81,7 @@ test/fast: test
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /mnt/e/File_Documents/vsCode/json/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/e/File_Documents/vsCode/json/build/CPackSourceConfig.cmake
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -103,7 +103,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /mnt/e/File_Documents/vsCode/json/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -113,14 +113,14 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/e/File_Documents/vsCode/json/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/json/build/CMakeFiles /mnt/e/File_Documents/vsCode/json/build/src/CMakeFiles/progress.marks
-	cd /mnt/e/File_Documents/vsCode/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/json/build/CMakeFiles 0
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/progress.marks
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/e/File_Documents/vsCode/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -130,18 +130,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/e/File_Documents/vsCode/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/e/File_Documents/vsCode/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/e/File_Documents/vsCode/json/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/CMakeFiles/LIB_SRCS.dir/rule:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/LIB_SRCS.dir/rule
+.PHONY : src/CMakeFiles/LIB_SRCS.dir/rule
+
+# Convenience name for target.
+LIB_SRCS: src/CMakeFiles/LIB_SRCS.dir/rule
+
+.PHONY : LIB_SRCS
+
+# fast build rule for target.
+LIB_SRCS/fast:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/build
+.PHONY : LIB_SRCS/fast
+
+sqlite3.o: sqlite3.c.o
+
+.PHONY : sqlite3.o
+
+# target to build an object file
+sqlite3.c.o:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/sqlite3.c.o
+.PHONY : sqlite3.c.o
+
+sqlite3.i: sqlite3.c.i
+
+.PHONY : sqlite3.i
+
+# target to preprocess a source file
+sqlite3.c.i:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/sqlite3.c.i
+.PHONY : sqlite3.c.i
+
+sqlite3.s: sqlite3.c.s
+
+.PHONY : sqlite3.s
+
+# target to generate assembly for a file
+sqlite3.c.s:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/sqlite3.c.s
+.PHONY : sqlite3.c.s
 
 # Help Target
 help:
@@ -154,6 +196,10 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... package"
+	@echo "... LIB_SRCS"
+	@echo "... sqlite3.o"
+	@echo "... sqlite3.i"
+	@echo "... sqlite3.s"
 .PHONY : help
 
 
@@ -165,6 +211,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/e/File_Documents/vsCode/json/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

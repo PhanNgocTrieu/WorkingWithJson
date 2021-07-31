@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/mnt/e/File_Documents/vsCode/json/json.hpp
+../include/sqlite3.h
+stdarg.h
+-
+
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/json.hpp
 algorithm
 -
 cstddef
@@ -330,9 +334,17 @@ utility
 vector
 -
 
-/mnt/e/File_Documents/vsCode/json/main.cpp
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/main.cpp
 iostream
 -
+fstream
+-
+istream
+-
+iomanip
+-
 json.hpp
-/mnt/e/File_Documents/vsCode/json/json.hpp
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/json.hpp
+sqlite3.h
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/sqlite3.h
 

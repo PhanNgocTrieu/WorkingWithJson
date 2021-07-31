@@ -3,4 +3,4 @@
 aux_source_directory(. DIR_LIB_SRCS)
 
 # Generate link library
-# add_library (LIB_SRCS ${DIR_LIB_SRCS})
+add_library (LIB_SRCS ${DIR_LIB_SRCS})

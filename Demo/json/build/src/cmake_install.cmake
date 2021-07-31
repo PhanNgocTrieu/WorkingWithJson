@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/e/File_Documents/vsCode/json/src
+# Install script for directory: /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

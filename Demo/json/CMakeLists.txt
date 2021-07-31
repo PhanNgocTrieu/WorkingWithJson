@@ -10,10 +10,12 @@ add_subdirectory(src)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)#Add the search path of the header file
 include_directories(".")
-aux_source_directory(./src SrcFiles)#Write the source file list in the variable SrcFiles
 
-add_executable(JSONDEMO main.cpp)
+#aux_source_directory(./src SrcFiles)#Write the source file list in the variable SrcFiles
 
+add_executable(${PROJECT_NAME} main.cpp)
+
+target_link_libraries(${PROJECT_NAME} LIB_SRCS)
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /mnt/e/File_Documents/vsCode/json
-BuildDirectory: /mnt/e/File_Documents/vsCode/json/build
+SourceDirectory: /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json
+BuildDirectory: /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/mnt/e/File_Documents/vsCode/json"
+ConfigureCommand: "/usr/bin/cmake" "/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 

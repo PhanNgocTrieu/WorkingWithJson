@@ -1,0 +1,2 @@
+/bin/ar qc libLIB_SRCS.a  CMakeFiles/LIB_SRCS.dir/sqlite3.c.o
+/bin/ranlib libLIB_SRCS.a
