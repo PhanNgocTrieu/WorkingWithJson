@@ -79,7 +79,7 @@ JSONDEMO_EXTERNAL_OBJECTS =
 
 JSONDEMO: CMakeFiles/JSONDEMO.dir/main.cpp.o
 JSONDEMO: CMakeFiles/JSONDEMO.dir/build.make
-JSONDEMO: src/libLIB_SRCS.a
+JSONDEMO: src/sqlite3/libsqlite3d.a
 JSONDEMO: CMakeFiles/JSONDEMO.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable JSONDEMO"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/JSONDEMO.dir/link.txt --verbose=$(VERBOSE)

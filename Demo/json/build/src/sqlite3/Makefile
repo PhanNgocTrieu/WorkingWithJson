@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -80,10 +68,21 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CPackSourceConfig.cmake
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -127,7 +126,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	/usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -135,27 +134,28 @@ package/fast: package
 
 .PHONY : package/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/sqlite3/CMakeFiles/progress.marks
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/sqlite3/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/sqlite3/clean
 .PHONY : clean
 
 # The main clean target
@@ -165,71 +165,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/sqlite3/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/sqlite3/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named JSONDEMO
+# Convenience name for target.
+src/sqlite3/CMakeFiles/SQLite3.dir/rule:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f CMakeFiles/Makefile2 src/sqlite3/CMakeFiles/SQLite3.dir/rule
+.PHONY : src/sqlite3/CMakeFiles/SQLite3.dir/rule
 
-# Build rule for target.
-JSONDEMO: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 JSONDEMO
-.PHONY : JSONDEMO
+# Convenience name for target.
+SQLite3: src/sqlite3/CMakeFiles/SQLite3.dir/rule
 
-# fast build rule for target.
-JSONDEMO/fast:
-	$(MAKE) -f CMakeFiles/JSONDEMO.dir/build.make CMakeFiles/JSONDEMO.dir/build
-.PHONY : JSONDEMO/fast
-
-#=============================================================================
-# Target rules for targets named SQLite3
-
-# Build rule for target.
-SQLite3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SQLite3
 .PHONY : SQLite3
 
 # fast build rule for target.
 SQLite3/fast:
-	$(MAKE) -f src/sqlite3/CMakeFiles/SQLite3.dir/build.make src/sqlite3/CMakeFiles/SQLite3.dir/build
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/sqlite3/CMakeFiles/SQLite3.dir/build.make src/sqlite3/CMakeFiles/SQLite3.dir/build
 .PHONY : SQLite3/fast
 
-main.o: main.cpp.o
+sqlite3.o: sqlite3.c.o
 
-.PHONY : main.o
+.PHONY : sqlite3.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/JSONDEMO.dir/build.make CMakeFiles/JSONDEMO.dir/main.cpp.o
-.PHONY : main.cpp.o
+sqlite3.c.o:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/sqlite3/CMakeFiles/SQLite3.dir/build.make src/sqlite3/CMakeFiles/SQLite3.dir/sqlite3.c.o
+.PHONY : sqlite3.c.o
 
-main.i: main.cpp.i
+sqlite3.i: sqlite3.c.i
 
-.PHONY : main.i
+.PHONY : sqlite3.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/JSONDEMO.dir/build.make CMakeFiles/JSONDEMO.dir/main.cpp.i
-.PHONY : main.cpp.i
+sqlite3.c.i:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/sqlite3/CMakeFiles/SQLite3.dir/build.make src/sqlite3/CMakeFiles/SQLite3.dir/sqlite3.c.i
+.PHONY : sqlite3.c.i
 
-main.s: main.cpp.s
+sqlite3.s: sqlite3.c.s
 
-.PHONY : main.s
+.PHONY : sqlite3.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/JSONDEMO.dir/build.make CMakeFiles/JSONDEMO.dir/main.cpp.s
-.PHONY : main.cpp.s
+sqlite3.c.s:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/sqlite3/CMakeFiles/SQLite3.dir/build.make src/sqlite3/CMakeFiles/SQLite3.dir/sqlite3.c.s
+.PHONY : sqlite3.c.s
 
 # Help Target
 help:
@@ -237,19 +226,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... package"
-	@echo "... edit_cache"
-	@echo "... JSONDEMO"
+	@echo "... install/strip"
 	@echo "... SQLite3"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... sqlite3.o"
+	@echo "... sqlite3.i"
+	@echo "... sqlite3.s"
 .PHONY : help
 
 
@@ -261,6 +249,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

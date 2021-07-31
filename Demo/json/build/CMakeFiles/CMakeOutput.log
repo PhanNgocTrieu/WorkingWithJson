@@ -924,3 +924,31 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8b26f/fast && /usr/bin/make -f CMakeFiles/cmTC_8b26f.dir/build.make CMakeFiles/cmTC_8b26f.dir/build
+make[1]: Entering directory '/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b26f.dir/CheckIncludeFile.c.o
+/bin/x86_64-linux-gnu-gcc-9    -o CMakeFiles/cmTC_8b26f.dir/CheckIncludeFile.c.o   -c /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8b26f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b26f.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-gcc-9      CMakeFiles/cmTC_8b26f.dir/CheckIncludeFile.c.o  -o cmTC_8b26f 
+make[1]: Leaving directory '/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_21a22/fast && /usr/bin/make -f CMakeFiles/cmTC_21a22.dir/build.make CMakeFiles/cmTC_21a22.dir/build
+make[1]: Entering directory '/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21a22.dir/CheckFunctionExists.c.o
+/bin/x86_64-linux-gnu-gcc-9   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_21a22.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_21a22
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21a22.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-gcc-9  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_21a22.dir/CheckFunctionExists.c.o  -o cmTC_21a22  -lpthread 
+make[1]: Leaving directory '/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/CMakeFiles/CMakeTmp'
+
+
+
