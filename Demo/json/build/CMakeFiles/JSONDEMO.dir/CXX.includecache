@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../include/mySQL.h
+sqlite3.h
+../include/sqlite3.h
+iostream
+-
+vector
+-
+
 ../include/sqlite3.h
 stdarg.h
 -
@@ -25,6 +33,8 @@ sqlite3.h
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/sqlite3.h
 src/HTTPRequest.hpp
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/HTTPRequest.hpp
+mySQL.h
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/mySQL.h
 
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/HTTPRequest.hpp
 cctype

@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9   -march=native -Wall -Wextra -Werror -pthread -g  -rdynamic CMakeFiles/simpledom.dir/simpledom/simpledom.cpp.o  -o ../../../bin/simpledom 

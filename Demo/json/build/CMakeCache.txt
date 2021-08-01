@@ -23,11 +23,14 @@ BUILD_SHARED_LIBS:BOOL=ON
 //build SQLite3 shell application
 BUILD_SHELL:BOOL=OFF
 
-//Build tests
+//Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
 //Path to a program.
 BZRCOMMAND:FILEPATH=BZRCOMMAND-NOTFOUND
+
+//Path to a program.
+CCACHE_FOUND:FILEPATH=CCACHE_FOUND-NOTFOUND
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/bin/addr2line
@@ -122,6 +125,9 @@ CMAKE_INSTALL_DATADIR:PATH=
 
 //Read-only architecture-independent data root (share)
 CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//The directory cmake files are installed in
+CMAKE_INSTALL_DIR:PATH=/usr/local/lib/cmake/RapidJSON
 
 //Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
 CMAKE_INSTALL_DOCDIR:PATH=
@@ -504,6 +510,15 @@ CVS_UPDATE_OPTIONS:STRING=-d -A -P
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Path to the documentation
+DOC_INSTALL_DIR:PATH=/usr/local/share/doc/RapidJSON
+
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
+
+//Doxygen documentation generation tool (http://www.doxygen.org)
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+
 //Set to ON to enable c-ares support
 ENABLE_ARES:BOOL=OFF
 
@@ -525,12 +540,21 @@ ENABLE_UNIX_SOCKETS:BOOL=ON
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
 
+//Path to a file.
+GTEST_INCLUDE_DIR:PATH=GTEST_INCLUDE_DIR-NOTFOUND
+
+//Path to a file.
+GTEST_SOURCE_DIR:PATH=GTEST_SOURCE_DIR-NOTFOUND
+
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 
 //disables all protocols except HTTP (This overrides all CURL_DISABLE_*
 // options)
 HTTP_ONLY:BOOL=OFF
+
+//The directory the headers are installed in
+INCLUDE_INSTALL_DIR:PATH=/usr/local/include
 
 //Value Computed by CMake
 JSONDEMO_BINARY_DIR:STATIC=/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build
@@ -546,6 +570,9 @@ LIBSSH2_INCLUDE_DIR:PATH=LIBSSH2_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
 LIBSSH2_LIBRARY:FILEPATH=LIBSSH2_LIBRARY-NOTFOUND
+
+//Directory where lib will install
+LIB_INSTALL_DIR:STRING=/usr/local/lib
 
 //Command to build the project
 MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
@@ -579,6 +606,43 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
 
 //Path to a file.
 RANDOM_FILE:FILEPATH=/dev/urandom
+
+//Build rapidjson with address sanitizer (gcc/clang)
+RAPIDJSON_BUILD_ASAN:BOOL=OFF
+
+//Build rapidjson with C++11
+RAPIDJSON_BUILD_CXX11:BOOL=ON
+
+//Build rapidjson with C++17
+RAPIDJSON_BUILD_CXX17:BOOL=OFF
+
+//Build rapidjson documentation.
+RAPIDJSON_BUILD_DOC:BOOL=ON
+
+//Build rapidjson examples.
+RAPIDJSON_BUILD_EXAMPLES:BOOL=ON
+
+//Build rapidjson perftests and unittests.
+RAPIDJSON_BUILD_TESTS:BOOL=ON
+
+//Use gtest installation in `thirdparty/gtest` by default if available
+RAPIDJSON_BUILD_THIRDPARTY_GTEST:BOOL=OFF
+
+//Build rapidjson with undefined behavior sanitizer (gcc/clang)
+RAPIDJSON_BUILD_UBSAN:BOOL=OFF
+
+//Build rapidjson with -march or -mcpu options
+RAPIDJSON_ENABLE_INSTRUMENTATION_OPT:BOOL=ON
+
+RAPIDJSON_HAS_STDSTRING:BOOL=OFF
+
+RAPIDJSON_USE_MEMBERSMAP:BOOL=OFF
+
+//Value Computed by CMake
+RapidJSON_BINARY_DIR:STATIC=/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/rapidjson
+
+//Value Computed by CMake
+RapidJSON_SOURCE_DIR:STATIC=/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/rapidjson
 
 //Name of the computer/site where compile is being run
 SITE:STRING=DESKTOP-E6OOBLB
@@ -962,6 +1026,10 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ENABLE_IPV6
 ENABLE_IPV6-ADVANCED:INTERNAL=1
 //Details about finding OpenSSL

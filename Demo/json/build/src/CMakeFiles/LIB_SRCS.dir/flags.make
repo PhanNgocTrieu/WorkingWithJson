@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC
 
 CXX_DEFINES = -DLIB_SRCS_EXPORTS
 
-CXX_INCLUDES = -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/include 
+CXX_INCLUDES = -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/include -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/JSONDEMO/src/rapidjson/include 
 

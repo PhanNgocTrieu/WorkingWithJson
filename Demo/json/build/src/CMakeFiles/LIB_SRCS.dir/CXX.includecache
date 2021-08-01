@@ -9,6 +9,10 @@
 ../include/mySQL.h
 sqlite3.h
 ../include/sqlite3.h
+iostream
+-
+vector
+-
 
 ../include/sqlite3.h
 stdarg.h
@@ -17,4 +21,6 @@ stdarg.h
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/mySQL.cpp
 mySQL.h
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/mySQL.h
+iomanip
+-
 

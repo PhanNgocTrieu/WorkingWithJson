@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9   -march=native -Wall -Wextra -Werror -pthread -g  -rdynamic CMakeFiles/tutorial.dir/tutorial/tutorial.cpp.o  -o ../../../bin/tutorial 
