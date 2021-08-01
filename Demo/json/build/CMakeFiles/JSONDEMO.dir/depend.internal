@@ -3,5 +3,6 @@
 
 CMakeFiles/JSONDEMO.dir/main.cpp.o
  ../include/sqlite3.h
- /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/json.hpp
  /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/main.cpp
+ /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/HTTPRequest.hpp
+ /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/json.hpp

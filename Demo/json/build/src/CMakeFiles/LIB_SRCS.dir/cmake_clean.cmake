@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LIB_SRCS.dir/sqlite3.c.o"
-  "libLIB_SRCS.a"
+  "CMakeFiles/LIB_SRCS.dir/mySQL.cpp.o"
   "libLIB_SRCS.pdb"
+  "libLIB_SRCS.so"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
+foreach(lang CXX)
   include(CMakeFiles/LIB_SRCS.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

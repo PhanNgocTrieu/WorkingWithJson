@@ -56,6 +56,30 @@ CMAKE_BINARY_DIR = /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -67,17 +91,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
@@ -88,6 +101,28 @@ package_source:
 package_source/fast: package_source
 
 .PHONY : package_source/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -158,32 +193,32 @@ LIB_SRCS/fast:
 	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/build
 .PHONY : LIB_SRCS/fast
 
-sqlite3.o: sqlite3.c.o
+mySQL.o: mySQL.cpp.o
 
-.PHONY : sqlite3.o
+.PHONY : mySQL.o
 
 # target to build an object file
-sqlite3.c.o:
-	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/sqlite3.c.o
-.PHONY : sqlite3.c.o
+mySQL.cpp.o:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/mySQL.cpp.o
+.PHONY : mySQL.cpp.o
 
-sqlite3.i: sqlite3.c.i
+mySQL.i: mySQL.cpp.i
 
-.PHONY : sqlite3.i
+.PHONY : mySQL.i
 
 # target to preprocess a source file
-sqlite3.c.i:
-	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/sqlite3.c.i
-.PHONY : sqlite3.c.i
+mySQL.cpp.i:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/mySQL.cpp.i
+.PHONY : mySQL.cpp.i
 
-sqlite3.s: sqlite3.c.s
+mySQL.s: mySQL.cpp.s
 
-.PHONY : sqlite3.s
+.PHONY : mySQL.s
 
 # target to generate assembly for a file
-sqlite3.c.s:
-	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/sqlite3.c.s
-.PHONY : sqlite3.c.s
+mySQL.cpp.s:
+	cd /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build && $(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/mySQL.cpp.s
+.PHONY : mySQL.cpp.s
 
 # Help Target
 help:
@@ -191,15 +226,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... package_source"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... package"
 	@echo "... LIB_SRCS"
-	@echo "... sqlite3.o"
-	@echo "... sqlite3.i"
-	@echo "... sqlite3.s"
+	@echo "... mySQL.o"
+	@echo "... mySQL.i"
+	@echo "... mySQL.s"
 .PHONY : help
 
 

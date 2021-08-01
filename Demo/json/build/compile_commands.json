@@ -8,5 +8,10 @@
   "directory": "/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/sqlite3",
   "command": "/bin/x86_64-linux-gnu-gcc-9 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1 -DSQLITE_DQS=0 -DSQLITE_ENABLE_JSON1 -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_LIKE_DOESNT_MATCH_BLOBS -DSQLITE_MAX_EXPR_DEPTH=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_USE_ALLOCA -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/include  -g   -o CMakeFiles/SQLite3.dir/sqlite3.c.o   -c /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/sqlite3/sqlite3.c",
   "file": "/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/sqlite3/sqlite3.c"
+},
+{
+  "directory": "/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DLIB_SRCS_EXPORTS -I/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/include  -g -fPIC   -o CMakeFiles/LIB_SRCS.dir/mySQL.cpp.o -c /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/mySQL.cpp",
+  "file": "/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/src/mySQL.cpp"
 }
 ]

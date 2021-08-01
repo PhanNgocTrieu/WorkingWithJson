@@ -204,6 +204,19 @@ SQLite3/fast:
 	$(MAKE) -f src/sqlite3/CMakeFiles/SQLite3.dir/build.make src/sqlite3/CMakeFiles/SQLite3.dir/build
 .PHONY : SQLite3/fast
 
+#=============================================================================
+# Target rules for targets named LIB_SRCS
+
+# Build rule for target.
+LIB_SRCS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LIB_SRCS
+.PHONY : LIB_SRCS
+
+# fast build rule for target.
+LIB_SRCS/fast:
+	$(MAKE) -f src/CMakeFiles/LIB_SRCS.dir/build.make src/CMakeFiles/LIB_SRCS.dir/build
+.PHONY : LIB_SRCS/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -247,6 +260,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... JSONDEMO"
 	@echo "... SQLite3"
+	@echo "... LIB_SRCS"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

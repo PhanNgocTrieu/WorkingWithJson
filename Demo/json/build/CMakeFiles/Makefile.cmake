@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "../src/CMakeLists.txt"
   "../src/sqlite3/CMakeLists.txt"
   "../src/sqlite3/sqlite3_config.h.in"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
@@ -56,10 +57,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/sqlite3/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/JSONDEMO.dir/DependInfo.cmake"
   "src/sqlite3/CMakeFiles/SQLite3.dir/DependInfo.cmake"
+  "src/CMakeFiles/LIB_SRCS.dir/DependInfo.cmake"
   )

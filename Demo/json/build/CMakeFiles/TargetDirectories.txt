@@ -16,3 +16,12 @@
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/sqlite3/CMakeFiles/package.dir
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/sqlite3/CMakeFiles/install/strip.dir
 /mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/sqlite3/CMakeFiles/SQLite3.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/install/strip.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/install/local.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/edit_cache.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/package_source.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/install.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/list_install_components.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/rebuild_cache.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/package.dir
+/mnt/e/File_Documents/vsCode/JSON_Practicing/WorkingWithJson/Demo/json/build/src/CMakeFiles/LIB_SRCS.dir
