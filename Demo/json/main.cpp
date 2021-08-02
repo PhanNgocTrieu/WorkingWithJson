@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    DOCS myDocs;
+    
     mySQL mSQL("myDB.db");
     json myJson;
     ofstream myJsonFile("myJsonFileFromServer.json");
@@ -32,11 +32,12 @@ int main()
     mSQL.createTable();
     //mSQL.deleteValues();
     int size = myJson["response"]["docs"].size();
-    cout << "size of Docs: " << size << endl;
+
 
     //insert into table
     for (int idex = 0; idex < size; idex++)
     {
+        DOCS myDocs;
         myDocs.ID = myJson["response"]["docs"][idex]["id"];
         myDocs.journal = myJson["response"]["docs"][idex]["journal"];
         myDocs.eissn = myJson["response"]["docs"][idex]["eissn"];
@@ -59,11 +60,9 @@ int main()
 
         myDocs.title_display = myJson["response"]["docs"][idex]["title_display"];
         myDocs.score = myJson["response"]["docs"][idex]["score"];
+        
         mSQL.insertValue(myDocs);
     }
-
-    cout << "Done filling values!" << endl;
-    cout << "List of DB\n\n";
     mSQL.selectTable();
 
     return 0;

@@ -26,6 +26,18 @@ typedef struct Docs
     string title_display;
     double score;
     Docs() : ID{""}, journal{""}, eissn{""}, publication_date{""}, article_type{""}, abstract{""}, title_display{""}, score{0.0} {}
+    ~Docs()
+    {
+        ID = "";
+        journal = "";
+        eissn = "";
+        publication_date = "";
+        article_type = "";
+        author_display = "";
+        abstract = "";
+        title_display = "";
+        score = 0.0;
+    }
 } DOCS;
 
 class mySQL
@@ -48,7 +60,7 @@ public:
     void createTable();
     void selectTable();
 
-    void insertValue(const DOCS& docsValues);
+    void insertValue(const DOCS &docsValues);
     void deleteValues();
     void dropTable();
 };
